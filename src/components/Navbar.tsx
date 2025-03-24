@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "My Services", href: "#services" },
 ];
 
 const Navbar: React.FC = () => {
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
     >
       <div className="section-container py-4">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-lg font-bold tracking-tight">
+          <a href="#" className="text-lg font-bold tracking-tight bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:scale-105 transform transition-all duration-300">
             Faizal Malek
           </a>
 
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
             ))}
             <a
               href="#contact"
-              className="btn-primary ml-4"
+              className="ml-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Contact Me
             </a>
@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
           ))}
           <a
             href="#contact"
-            className="btn-primary mt-4 mx-4"
+            className="mt-4 mx-4 px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             onClick={handleLinkClick}
           >
             Contact Me

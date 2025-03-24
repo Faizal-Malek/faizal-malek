@@ -74,22 +74,22 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-4 mt-8">
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <MapPin className="h-5 w-5 text-primary" />
+              <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
+                  <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium">Location</h4>
+                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Location</h4>
                   <p className="text-muted-foreground">Erasmia, Pretoria, South Africa</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <Mail className="h-5 w-5 text-primary" />
+              <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
+                  <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium">Email</h4>
+                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Email</h4>
                   <a
                     href="mailto:faizalmalek03@icloud.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -99,12 +99,12 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <Phone className="h-5 w-5 text-primary" />
+              <div className="flex items-start gap-4 group p-4 rounded-lg border border-gradient-to-r from-blue-500/20 to-purple-500/20 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300 shadow-sm hover:shadow-md">
+                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
+                  <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-medium">Phone</h4>
+                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Phone</h4>
                   <a
                     href="tel:0760205904"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -115,8 +115,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-card rounded-lg p-6 border mt-8">
-              <h4 className="font-medium mb-2">Open to Opportunities</h4>
+            <div className="space-y-4 shadow-lg rounded-lg p-8 bg-gradient-to-r from-white to-gray-50/80 border-2 border-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
+              <h4 className="font-medium">Open to Opportunities</h4>
               <p className="text-sm text-muted-foreground">
                 I'm currently looking for new opportunities as a Java Developer, but I'm open to discussing other roles that match my skills and experience.
               </p>
@@ -125,94 +125,69 @@ const Contact: React.FC = () => {
         </FadeIn>
 
         <FadeIn direction="left">
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 p-8 rounded-xl bg-white/80 shadow-xl border-2 border-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 h-full">
             <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="text-sm font-medium"
-                >
-                  Your Name
-                </label>
+              <div className="space-y-2 w-full">
                 <input
-                  id="name"
-                  name="name"
                   type="text"
+                  name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  placeholder="Your Name"
                   required
-                  className="w-full px-4 py-2 rounded-md border border-gray-400 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
                 />
               </div>
-
-              <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="text-sm font-medium"
-                >
-                  Your Email
-                </label>
+              <div className="space-y-2 w-full">
                 <input
-                  id="email"
-                  name="email"
                   type="email"
+                  name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  placeholder="Your Email"
                   required
-                  className="w-full px-4 py-2 rounded-md border border-gray-400 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                  className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
                 />
               </div>
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="subject"
-                className="text-sm font-medium"
-              >
-                Subject
-              </label>
+            <div className="space-y-2 w-full">
               <input
-                id="subject"
-                name="subject"
                 type="text"
+                name="subject"
                 value={formData.subject}
                 onChange={handleChange}
+                placeholder="Subject"
                 required
-                className="w-full px-4 py-2 rounded-md border border-gray-400 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+                className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
               />
             </div>
 
-            <div className="space-y-2">
-              <label
-                htmlFor="message"
-                className="text-sm font-medium"
-              >
-                Message
-              </label>
+            <div className="space-y-2 w-full">
               <textarea
-                id="message"
                 name="message"
-                rows={5}
                 value={formData.message}
                 onChange={handleChange}
+                placeholder="Your Message"
                 required
-                className="w-full px-4 py-2 rounded-md border border-gray-400 bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-              ></textarea>
+                rows={8}
+                className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base resize-none"
+              />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-primary w-full flex items-center justify-center border border-gray-400 text-blue-900"
+              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-xl inline-flex items-center justify-center rounded-xl px-8 py-4 font-medium transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:pointer-events-none disabled:opacity-50 border-2 border-transparent hover:border-white/20 text-base"
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin text-white" />
                   Sending...
                 </>
               ) : (
                 <>
-                  <Send className="h-4 w-4 mr-2" />
+                  <Send className="mr-2 h-5 w-5 text-white" />
                   Send Message
                 </>
               )}

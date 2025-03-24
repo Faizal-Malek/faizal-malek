@@ -8,13 +8,16 @@ interface SectionProps {
   children: React.ReactNode;
 }
 
-const Section: React.FC<SectionProps> = ({ id, className, children }) => {
+const Section: React.FC<SectionProps> = ({ children, className, id }) => {
   return (
     <section
       id={id}
-      className={cn("py-8 md:py-12 w-full overflow-hidden bg-pint", className)}
+      className={cn(
+        "py-32 first:pt-24 last:pb-24 overflow-hidden",
+        className
+      )}
     >
-      <div className="section-container">{children}</div>
+      <div className="container px-4 mx-auto">{children}</div>
     </section>
   );
 };

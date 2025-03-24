@@ -14,7 +14,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, label }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="h-10 w-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+    className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white hover:shadow-lg transform hover:scale-105 transition-all duration-300"
     aria-label={label}
   >
     {icon}
@@ -26,12 +26,12 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="py-0">
-      <div className=" items-center justify-center p-3  bg-background">
-    <div className="shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.001),-10px_-10px_30px_4px_rgba(210,210,210)] rounded-lg">
+      <div className="items-center justify-center p-3 bg-background/80 backdrop-blur-sm">
+    <div className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg bg-gradient-to-r from-background to-background/95 hover:from-background/95 hover:to-background">
 
       <div className="section-container ">
         <div className="flex flex-col items-center">
-          <a href="#" className="text-lg font-bold tracking-tight mb-8">
+          <a href="#" className="text-lg font-bold tracking-tight mb-8 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:scale-105 transform transition-all duration-300">
             Faizal Malek
           </a>
 
@@ -56,31 +56,31 @@ const Footer: React.FC = () => {
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
             <a
               href="#about"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
             >
               About
             </a>
             <a
               href="#experience"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
             >
               Experience
             </a>
             <a
               href="#skills"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
             >
               Skills
             </a>
             <a
               href="#projects"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
             >
               Projects
             </a>
             <a
               href="#contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
             >
               Contact
             </a>

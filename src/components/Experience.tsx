@@ -26,24 +26,24 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   return (
     <div className="flex gap-4 md:gap-6">
       <div className="flex flex-col items-center">
-        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
           {isEducation ? (
-            <GraduationCap className="h-5 w-5 text-primary" />
+            <GraduationCap className="h-5 w-5 text-white" />
           ) : (
-            <Briefcase className="h-5 w-5 text-primary" />
+            <Briefcase className="h-5 w-5 text-white" />
           )}
         </div>
-        {!isLast && <div className="w-0.5 bg-border flex-1 my-2"></div>}
+        {!isLast && <div className="w-0.5 bg-gradient-to-b from-blue-500/50 to-purple-500/50 flex-1 my-2"></div>}
       </div>
-      <div className={cn("pb-8", isLast && "pb-0")}>
-        <div className="inline-block px-3 py-1 mb-2 text-xs font-medium tracking-wider text-muted-foreground bg-muted rounded-full">
+      <div className={cn("pb-8 group", isLast && "pb-0")}>
+        <div className="inline-block px-3 py-1 mb-2 text-xs font-medium tracking-wider text-muted-foreground bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-300">
           {date}
         </div>
-        <h3 className="text-lg font-medium">{title}</h3>
+        <h3 className="text-lg font-medium bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">{title}</h3>
         {company && (
-          <p className="text-primary font-medium text-sm mb-2">{company}</p>
+          <p className="text-primary font-medium text-sm mb-2 hover:text-blue-600 transition-colors duration-300">{company}</p>
         )}
-        <div className="mt-2 text-muted-foreground text-sm">{description}</div>
+        <div className="mt-2 text-muted-foreground text-sm p-4 rounded-lg bg-white shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 hover:scale-105 border-2 border-gray-50">{description}</div>
       </div>
     </div>
   );
