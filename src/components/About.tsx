@@ -43,9 +43,11 @@ const About: React.FC = () => {
         <FadeIn direction="right">
           <div className="relative">
             <div className="aspect-square bg-muted rounded-lg overflow-hidden shadow-lg">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary/20">FM</div>
-              </div>
+              <img 
+                src="/asset/Faizal.jpg" 
+                alt="Faizal Malek" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-lg" />
           </div>
