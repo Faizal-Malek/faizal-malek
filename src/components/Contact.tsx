@@ -1,13 +1,15 @@
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Section from "./Section";
 import SectionTitle from "./SectionTitle";
 import FadeIn from "./FadeIn";
 import { MapPin, Mail, Phone, Send, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,23 +28,45 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Format the WhatsApp message
-    const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+    // EmailJS service configuration
+    const serviceId = 'service_r041b6w';
+    const templateId = 'template_68psb5o';
+    const publicKey = 'sIlTFGn5hT9PybRH_'; // EmailJS public key
     
-    // Create WhatsApp URL
-    const whatsappUrl = `https://wa.me/27760205904?text=${encodeURIComponent(whatsappMessage)}`;
-    
-    // Open WhatsApp in a new window
-    window.open(whatsappUrl, '_blank');
-    
-    toast.success("Message sent successfully! Redirecting to WhatsApp...");
-    setIsSubmitting(false);
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+    if (formRef.current) {
+      emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
+        .then((result) => {
+          console.log('Email sent successfully:', result.text);
+          toast.success("Message sent successfully!");
+          
+          // Format the WhatsApp message as a backup/additional notification
+          const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+          
+          // Create WhatsApp URL
+          const whatsappUrl = `https://wa.me/27760205904?text=${encodeURIComponent(whatsappMessage)}`;
+          
+          // Open WhatsApp in a new window
+          window.open(whatsappUrl, '_blank');
+          
+          // Reset form
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        })
+        .catch((error) => {
+          console.error('Error sending email:', error.text);
+          toast.error("Failed to send email. Please try again later.");
+        })
+        .finally(() => {
+          setIsSubmitting(false);
+        });
+    } else {
+      toast.error("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,7 +134,7 @@ const Contact: React.FC = () => {
         </FadeIn>
 
         <FadeIn direction="left">
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label
