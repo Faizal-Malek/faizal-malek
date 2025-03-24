@@ -29,8 +29,8 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
 
     // EmailJS service configuration
-    const serviceId = 'service_r041b6w';
-    const templateId = 'template_68psb5o';
+    const serviceId = 'default_service';
+    const templateId = 'template_36joyj9';
     const publicKey = 'sIlTFGn5hT9PybRH_'; // EmailJS public key
     
     if (formRef.current) {
@@ -38,15 +38,6 @@ const Contact: React.FC = () => {
         .then((result) => {
           console.log('Email sent successfully:', result.text);
           toast.success("Message sent successfully!");
-          
-          // Format the WhatsApp message as a backup/additional notification
-          const whatsappMessage = `*New Contact Form Submission*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
-          
-          // Create WhatsApp URL
-          const whatsappUrl = `https://wa.me/27760205904?text=${encodeURIComponent(whatsappMessage)}`;
-          
-          // Open WhatsApp in a new window
-          window.open(whatsappUrl, '_blank');
           
           // Reset form
           setFormData({
