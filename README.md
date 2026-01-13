@@ -1,69 +1,76 @@
-# Welcome to your Lovable project
+# Hi there, I'm Faizal Malek 👋
 
-## Project info
+## Full-Stack Developer | Web3 Specialist | DevOps Enthusiast
 
+I'm a passionate developer specializing in modern web applications, blockchain solutions, and cloud infrastructure. I love building beautiful, functional applications that solve real-world problems.
 
+### 🚀 About Me
 
-## How can I edit this code?
+- 🔭 Currently working on **DeFi platforms** and **enterprise client management systems**
+- 🌱 Learning **Kubernetes**, **Docker**, and **cloud-native technologies**
+- 💼 Building production applications with **React**, **Next.js**, and **TypeScript**
+- 🌐 Exploring **Web3** and **blockchain** technologies
+- 📊 Creating **data analytics dashboards** and **visualization tools**
 
-There are several ways of editing your application.
+### 💻 Tech Stack
 
-**Use Lovable**
+**Frontend:**  
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/74a757bd-e380-4724-8d2c-8eab3357bdc0) and start prompting.
+**Backend:**  
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 
-Changes made via Lovable will be committed automatically to this repo.
+**DevOps & Tools:**  
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-**Use your preferred IDE**
+### 🌟 Featured Projects
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### 🏢 [Libertas Client Portal](https://libertas-client-portal.web.app/super-admin)
+Production client management platform with real-time analytics, dual-interface system, and comprehensive reporting.
+- **Tech:** React, Firebase, Custom Analytics Engine
+- **Features:** Client intake system, Sales dashboard, Weekly/monthly reports
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+#### 📊 [Urban Tokenization Survey](https://github.com/Faizal-Malek/urban-tokenization-survey)
+Full-stack survey platform with advanced analytics and data visualization.
+- **Tech:** React, TypeScript, Node.js, MongoDB, Recharts
+- **Features:** Multi-step forms, Admin dashboard, Real-time analytics
 
-Follow these steps:
+#### 💼 [Personal Portfolio](https://faizal-malek.vercel.app/)
+Modern, interactive portfolio showcasing projects and skills.
+- **Tech:** React, Vite, Custom animations
+- **Features:** Digital typewriter aesthetic, Responsive design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+#### 🔐 [Login & Signup System](https://github.com/Faizal-Malek/loginAndSignupSystem)
+Authentication system built with React and Firebase.
+- **Tech:** React, Firebase Authentication
+- **Features:** User registration, Secure login, Session management
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 📈 GitHub Stats
 
-# Step 3: Install the necessary dependencies.
-npm i
+![Faizal's GitHub stats](https://github-readme-stats.vercel.app/api?username=Faizal-Malek&show_icons=true&theme=radical)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🔗 Connect With Me
 
-**Edit a file directly in GitHub**
+[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://faizal-malek.vercel.app/)
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/its_just_faizal_/)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 💡 Current Focus
 
-**Use GitHub Codespaces**
+- 🎯 Building scalable web applications with modern frameworks
+- 🔧 Implementing DevOps practices with Kubernetes and Docker
+- 🌐 Exploring Web3 and decentralized applications
+- 📊 Creating data-driven analytics solutions
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/74a757bd-e380-4724-8d2c-8eab3357bdc0) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+⭐️ From [Faizal-Malek](https://github.com/Faizal-Malek)
