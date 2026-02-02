@@ -145,6 +145,16 @@
     @apply bg-gradient-to-r from-royal to-royal-light bg-clip-text text-transparent;
   }
   
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+  
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
+  }
+  
   .animate-delay-100 {
     animation-delay: 100ms;
   }
@@ -183,37 +193,67 @@
   position: fixed;
   width: 40px;
   height: 40px;
-  border: 2px solid;
-  border-image: linear-gradient(135deg, #3b82f6, #8b5cf6) 1;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #3b82f6, #8b5cf6) border-box;
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, border-width 0.3s ease;
   z-index: 9999;
-  mix-blend-mode: difference;
+  will-change: transform;
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              border-width 0.3s ease;
+}
+
+.custom-cursor-outer.hovering {
+  width: 60px;
+  height: 60px;
+  border-width: 3px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899) border-box;
+}
+
+.custom-cursor-outer.clicking {
+  width: 30px;
+  height: 30px;
 }
 
 .custom-cursor-inner {
   position: fixed;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: width 0.15s ease, height 0.15s ease;
   z-index: 10000;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  will-change: transform;
+  transition: width 0.2s ease,
+              height 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
-a:hover ~ .custom-cursor-outer,
-button:hover ~ .custom-cursor-outer {
-  width: 60px;
-  height: 60px;
-  border-width: 3px;
-}
-
-a:hover ~ .custom-cursor-inner,
-button:hover ~ .custom-cursor-inner {
+.custom-cursor-inner.hovering {
   width: 12px;
   height: 12px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+}
+
+.custom-cursor-inner.clicking {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 1);
+}
+
+/* Hide custom cursor on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  
+  .custom-cursor-outer,
+  .custom-cursor-inner {
+    display: none !important;
+  }
 }

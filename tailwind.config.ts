@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -107,6 +108,22 @@ export default {
 				'reveal': {
 					'0%': { 'clip-path': 'inset(0 100% 0 0)' },
 					'100%': { 'clip-path': 'inset(0 0 0 0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-20px)' }
+				},
+				'gradient': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'gradient-x': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '0.3' },
+					'50%': { opacity: '0.5' }
 				}
 			},
 			animation: {
@@ -118,9 +135,13 @@ export default {
 				'slide-down': 'slide-down 0.5s ease-out forwards',
 				'typewriter': 'typewriter 4s steps(40) forwards',
 				'blink': 'blink 0.7s infinite',
-				'reveal': 'reveal 1.5s ease-in-out forwards'
+				'reveal': 'reveal 1.5s ease-in-out forwards',
+				'float': 'float 3s ease-in-out infinite',
+				'gradient': 'gradient 3s ease infinite',
+				'gradient-x': 'gradient-x 3s ease infinite',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;
