@@ -110,7 +110,7 @@ const Projects: React.FC = () => {
       title: "YOUR-TIME-WISER",
       description:
         "Hackathon Winning Project: A smart time management and productivity application for efficient task tracking.",
-      image: "/asset/placeholder.svg",
+      image: "/asset/time-wiser.png",
       tags: ["Java", "Android", "Hackathon Winner"],
       repo: "https://github.com/Faizal-Malek/YOUR-TIME-WISER",
     },

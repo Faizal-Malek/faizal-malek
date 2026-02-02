@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -9,15 +8,16 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
 
 const Index = () => {
   useEffect(() => {
     // For smooth animations when page loads
     document.documentElement.style.scrollBehavior = "smooth";
-    
+
     // Reset scroll position to top when page loads
     window.scrollTo(0, 0);
-    
+
     // Cleanup
     return () => {
       document.documentElement.style.scrollBehavior = "";
