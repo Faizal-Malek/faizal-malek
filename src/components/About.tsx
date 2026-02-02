@@ -44,9 +44,9 @@ const About: React.FC = () => {
           <div className="relative group">
             <div className="aspect-square bg-muted rounded-xl overflow-hidden shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] group-hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 group-hover:scale-105">
               <div className="relative w-full h-full">
-                <img 
-                  src="/asset/Faizal.jpg" 
-                  alt="Faizal Malek" 
+                <img
+                  src="/asset/Faizal.jpg"
+                  alt="Faizal Malek"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -59,15 +59,15 @@ const About: React.FC = () => {
         <FadeIn direction="left">
           <div className="space-y-4 p-6 rounded-xl bg-white shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 hover:scale-105 border-2 border-gray-50 group">
             <h6 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
-              A Passionate Software Developer with a Focus on Innovation and Problem-Solving
+              Full-Stack Developer | Web3 Specialist | DevOps Enthusiast
             </h6>
             <p className="text-muted-foreground">
-              I am a dedicated <strong>Software Developer</strong> skilled in <strong>React, Node.js,</strong> and <strong>Firebase</strong>, with experience in building dynamic web and mobile applications. I thrive on solving complex problems with creative and analytical thinking, delivering scalable and efficient solutions.
+              I am a highly motivated <strong>Software Developer</strong> with a strong focus on building production-grade <strong>Full-Stack applications</strong>, exploring <strong>Web3 technologies</strong>, and implementing <strong>DevOps practices</strong>. Experienced in <strong>React, Next.js, Node.js</strong>, and cloud integrations.
             </p>
             <p className="text-muted-foreground">
-              Committed to continuous learning, I stay updated with emerging technologies to deliver cutting-edge solutions. Proficient in <strong>PHP</strong>, <strong>Yii framework </strong>, and<strong> Java</strong>, I bring a collaborative mindset and a passion for innovation to every project.
+              Passionate about creating scalable, user-centric solutions and leveraging data visualization to drive insights. Committed to continuous learning with recent certifications in <strong>Algorithmic Toolbox</strong> and <strong>Google IT Support</strong>. I bring expertise in <strong>TypeScript, Docker, Kubernetes</strong>, and modern frameworks to every project.
             </p>
-            
+
             <div className="grid grid-cols-2 gap-4 mt-8 p-4 rounded-lg bg-gray-50/50">
               <div className="space-y-1 p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-colors duration-300">
                 <p className="text-sm font-medium text-muted-foreground">Name</p>

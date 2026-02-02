@@ -81,58 +81,56 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "Tourist Guide Application",
+      title: "Libertas Client Portal",
       description:
-        "A mobile app leveraging Google Maps API to provide intuitive navigation with features like landmark history and favorites.",
-      image: "/asset/tourist-guide.png",
-      tags: ["Java", "Android", "Google Maps API", "Firebase"],
-      link: "#",
-      repo: "#",
-    },
-    {
-      title: "Sah Cut & Edge Website",
-      description:
-        "Dynamic website showcasing company products, services, and portfolio with integrated contact management system.",
-      image: "/asset/Sah_Cut_Edge_Website.png",
-      tags: ["PHP", "JavaScript", "Firebase", "Responsive Design"],
-      link: "#",
-      
-    },
-    {
-      title: "Image Generator Tool",
-      description:
-        "Tool for design teams to generate and manipulate images, improving design workflows and efficiency.",
-      image: "/asset/image-generator.png",
-      tags: ["Python", ],
-      link: "#",
-      repo: "#",
-    },
-    {
-      title: "Client Management Portal",
-      description:
-        "Comprehensive web application for client interactions and management with user authentication and data tracking.",
+        "Production-ready client management system featuring a dual-interface for admins and clients, real-time analytics, and automated reporting.",
       image: "/asset/client-portal.png",
-      tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
-      link: "#",
-      
+      tags: ["React", "Firebase", "Docker", "Analytics"],
+      link: "https://libertas-client-portal.web.app/super-admin",
+    },
+    {
+      title: "Urban Tokenization Survey",
+      description:
+        "Full-stack survey platform with advanced analytics dashboard, AI-generated insights, and data visualization for urban planning.",
+      image: "/asset/web-app.png",
+      tags: ["TypeScript", "React", "Node.js", "MongoDB", "Recharts"],
+      link: "https://urban-tokenization-survey.vercel.app",
+      repo: "https://github.com/Faizal-Malek/urban-tokenization-survey",
+    },
+    {
+      title: "Login & Signup System",
+      description:
+        "Robust authentication system implementing best practices with secure login, user registration, and session management.",
+      image: "/asset/web-app.png",
+      tags: ["React", "Firebase", "Authentication"],
+      link: "https://loginsystem-fm.web.app",
+      repo: "https://github.com/Faizal-Malek/loginAndSignupSystem",
+    },
+    {
+      title: "YOUR-TIME-WISER",
+      description:
+        "Hackathon Winning Project: A smart time management and productivity application for efficient task tracking.",
+      image: "/asset/placeholder.svg",
+      tags: ["Java", "Android", "Hackathon Winner"],
+      repo: "https://github.com/Faizal-Malek/YOUR-TIME-WISER",
     },
   ];
 
   return (
     <Section id="projects" className="">
-    <div className="">
-          <SectionTitle subtitle="MY WORK">Featured Projects</SectionTitle>
-          <div className="grid md:grid-cols-2 gap-8">
+      <div className="">
+        <SectionTitle subtitle="MY WORK">Featured Projects</SectionTitle>
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} index={index} />
+            <ProjectCard key={index} {...project} index={index} />
           ))}
-          </div>
+        </div>
 
-          <FadeIn className="mt-12 text-center">
+        <FadeIn className="mt-12 text-center">
           <p className="text-muted-foreground mb-6">
-          These projects showcase my skills and experience in developing real-world applications using various technologies
+            These projects showcase my skills and experience in developing real-world applications using various technologies
           </p>
-          </FadeIn>
+        </FadeIn>
       </div>
     </Section>
   );

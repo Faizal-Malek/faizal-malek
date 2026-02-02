@@ -43,27 +43,27 @@ const Skills: React.FC = () => {
     {
       title: "Programming Languages",
       icon: <Code className="h-5 w-5 text-white" />,
-      skills: ["Java", "C#", "JavaScript (ES6+)", "PHP", "Python"],
+      skills: ["TypeScript", "JavaScript (ES6+)", "Java", "PHP", "Python", "C#"],
     },
     {
       title: "Frameworks & Libraries",
       icon: <Layers className="h-5 w-5 text-white" />,
-      skills: ["React.js", "Node.js", "Firebase", "Yii Framework", "Gradle"],
+      skills: ["React.js", "Next.js", "Node.js", "Express", "Firebase", "Framer Motion", "Yii Framework"],
     },
     {
       title: "Styling & Frontend",
       icon: <PenTool className="h-5 w-5 text-white" />,
-      skills: ["HTML", "CSS", "SCSS", "Tailwind CSS", "Bootstrap"],
+      skills: ["Tailwind CSS", "CSS", "SCSS", "HTML", "Responsive Design"],
     },
     {
       title: "Database Technologies",
       icon: <Database className="h-5 w-5 text-white" />,
-      skills: ["MySQL", "Firebase Realtime Database", "PL/SQL","MongoDB"],
+      skills: ["MySQL", "Firebase Realtime Database", "PL/SQL", "MongoDB"],
     },
     {
-      title: "Development Tools",
+      title: "DevOps & Tools",
       icon: <Terminal className="h-5 w-5 text-white" />,
-      skills: ["Git", "Google Cloud", "Docker", "SDLC"],
+      skills: ["Docker", "Kubernetes", "Git", "Vite", "Google Cloud Platform"],
     },
     {
       title: "Backend & Infrastructure",
