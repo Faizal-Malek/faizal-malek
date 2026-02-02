@@ -26,6 +26,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <CustomCursor />
       <Navbar />
       <main className="flex-grow">
         <Hero />
