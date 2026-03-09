@@ -59,7 +59,7 @@ const About: React.FC = () => {
         <FadeIn direction="left">
           <div className="space-y-4 p-6 rounded-xl bg-white shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 hover:scale-105 border-2 border-gray-50 group">
             <h6 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
-              Junior Full-Stack Developer | React & Node.js | SQL Enthusiast
+              Junior Full-Stack Developer | React & Node.js Developer | SQL Enthusiast
             </h6>
             <p className="text-muted-foreground">
               I am a results-oriented <strong>Software Developer</strong> with a solid foundation in building production-ready <strong>enterprise applications</strong>. My expertise lies in the <strong>React and Node.js ecosystem</strong>, complemented by a strong proficiency in <strong>SQL query writing</strong> and database management.

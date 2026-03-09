@@ -1,6 +1,6 @@
 # Hi there, I'm Faizal Malek 👋
 
-## Junior Full-Stack Developer | Node.js & React Specialist | SQL Enthusiast
+## Junior Full-Stack Developer | Node.js & React Developer | SQL Enthusiast
 
 I'm a dedicated developer focused on building scalable web applications and high-performance enterprise systems. I enjoy the process of turning complex requirements into clean, maintainable code, with a particular interest in database design and frontend-backend integration.
 

@@ -1,5 +1,5 @@
 # FAIZAL MALEK
-**Junior Full-Stack Developer | Node.js & React Specialist | SQL Enthusiast**
+**Junior Full-Stack Developer | Node.js & React Developer | SQL Enthusiast**
 
 📍 Centurion, Gauteng, South Africa  
 📧 faizalmalek03@icloud.com | 📱 076 020 5904  
