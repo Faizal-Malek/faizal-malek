@@ -1,16 +1,16 @@
 # Hi there, I'm Faizal Malek 👋
 
-## Full-Stack Developer | Web3 Specialist | DevOps Enthusiast
+## Junior Full-Stack Developer | Node.js & React Specialist | SQL Enthusiast
 
-I'm a passionate developer specializing in modern web applications, blockchain solutions, and cloud infrastructure. I love building beautiful, functional applications that solve real-world problems.
+I'm a dedicated developer focused on building scalable web applications and high-performance enterprise systems. I enjoy the process of turning complex requirements into clean, maintainable code, with a particular interest in database design and frontend-backend integration.
 
 ### 🚀 About Me
 
-- 🔭 Currently working on **DeFi platforms** and **enterprise client management systems**
-- 🌱 Learning **Kubernetes**, **Docker**, and **cloud-native technologies**
-- 💼 Building production applications with **React**, **Next.js**, and **TypeScript**
-- 🌐 Exploring **Web3** and **blockchain** technologies
-- 📊 Creating **data analytics dashboards** and **visualization tools**
+- 🔭 Currently developing **enterprise-grade client management systems** and real-time analytics dashboards.
+- 🌱 Expanding my knowledge in **MS SQL Server**, **query optimization**, and **software testing**.
+- 💼 Building production-ready applications using **React**, **Node.js**, and **TypeScript**.
+- 🌐 Interested in how **systems integration** and **cloud-native architecture** can drive business growth.
+- 📊 Passionate about **data visualization** and creating intuitive user experiences.
 
 ### 💻 Tech Stack
 
@@ -19,57 +19,45 @@ I'm a passionate developer specializing in modern web applications, blockchain s
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
 
-**Backend:**  
+**Backend & Databases:**  
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white)
+![SQL](https://img.shields.io/badge/-SQL-CC2927?style=flat-square&logo=microsoft-sql-server&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
 
-**DevOps & Tools:**  
-![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+**Tools & QA:**  
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Testing](https://img.shields.io/badge/-Software_Testing-0055FF?style=flat-square&logo=testing-library&logoColor=white)
 
 ### 🌟 Featured Projects
 
 #### 🏢 [Libertas Client Portal](https://libertas-client-portal.web.app/super-admin)
-Production client management platform with real-time analytics, dual-interface system, and comprehensive reporting.
-- **Tech:** React, Firebase, Custom Analytics Engine
-- **Features:** Client intake system, Sales dashboard, Weekly/monthly reports
+A production client management platform featuring a dual-interface system, real-time analytics, and automated reporting for enterprise scaling.
+- **Main Tech:** React, Node.js, Firebase.
 
 #### 📊 [Urban Tokenization Survey](https://github.com/Faizal-Malek/urban-tokenization-survey)
-Full-stack survey platform with advanced analytics and data visualization.
-- **Tech:** React, TypeScript, Node.js, MongoDB, Recharts
-- **Features:** Multi-step forms, Admin dashboard, Real-time analytics
+A full-stack analytics platform designed for data collection and visualization with a robust backend architecture.
+- **Main Tech:** React, TypeScript, Node.js, MongoDB.
 
-#### 💼 [Personal Portfolio](https://faizal-malek.vercel.app/)
-Modern, interactive portfolio showcasing projects and skills.
-- **Tech:** React, Vite, Custom animations
-- **Features:** Digital typewriter aesthetic, Responsive design
-
-#### 🔐 [Login & Signup System](https://github.com/Faizal-Malek/loginAndSignupSystem)
-Authentication system built with React and Firebase.
-- **Tech:** React, Firebase Authentication
-- **Features:** User registration, Secure login, Session management
-
-### 📈 GitHub Stats
-
-![Faizal's GitHub stats](https://github-readme-stats.vercel.app/api?username=Faizal-Malek&show_icons=true&theme=radical)
+#### 🔐 [Authentication System](https://github.com/Faizal-Malek/loginAndSignupSystem)
+Implementation of secure user registration and session management using modern authentication best practices.
+- **Main Tech:** React, Firebase Auth.
 
 ### 🔗 Connect With Me
 
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://za.linkedin.com/in/faizal-malek-663a77245)
 [![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://faizal-malek.vercel.app/)
-[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/its_just_faizal_/)
 
 ### 💡 Current Focus
 
-- 🎯 Building scalable web applications with modern frameworks
-- 🔧 Implementing DevOps practices with Kubernetes and Docker
-- 🌐 Exploring Web3 and decentralized applications
-- 📊 Creating data-driven analytics solutions
+- 🎯 Mastering complex SQL queries and database management.
+- 🔧 Strengthening software testing and code quality assurance practices.
+- 🌐 Working on scalable, production-grade enterprise applications.
+- 📊 Improving user experience through better data visualization tools.
 
 ---
 

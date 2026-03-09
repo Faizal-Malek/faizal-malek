@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizal Malek - CV</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: white;
+            padding: 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 12px;
+            color: #4b5563;
+        }
+
+        .contact-info a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111827;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .company {
+            font-style: italic;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .date {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .summary {
+            background: #f9fafb;
+            padding: 15px;
+            border-left: 4px solid #3b82f6;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+
+        .tech-stack {
+            font-weight: 600;
+            color: #3b82f6;
+            font-size: 12px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .skill-category h4 {
+            color: #3b82f6;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .skill-list {
+            font-size: 12px;
+            color: #4b5563;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #e5e7eb;
+        }
+
+        .project-links {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .project-links a {
+            color: #3b82f6;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .cert-item {
+            margin-bottom: 10px;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .cert-issuer {
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        .competencies {
+            background: #eff6ff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 12px;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .project,
+            .job-section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FAIZAL MALEK</h1>
+        <div class="subtitle">Junior Full-Stack Developer | Node.js & React Specialist | SQL Enthusiast</div>
+        <div class="contact-info">
+            <span>📍 Centurion, Gauteng, South Africa</span>
+            <span>📧 faizalmalek03@icloud.com</span>
+            <span>📱 076 020 5904</span>
+            <span><a href="https://github.com/Faizal-Malek">GitHub</a></span>
+            <span><a href="https://za.linkedin.com/in/faizal-malek-663a77245">LinkedIn</a></span>
+            <span><a href="https://faizal-malek.vercel.app">Portfolio</a></span>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <div class="summary">
+            I am a results-driven developer with a solid foundation in building enterprise-scale applications. My
+            experience centers on the React and Node.js ecosystem, where I focus on creating systems that are both
+            robust and user-friendly. I have a strong interest in database optimization and query writing, particularly
+            within high-stakes environments. I enjoy the challenge of bridging complex backend logic with intuitive
+            frontend experiences, and I am always looking for ways to improve code quality through rigorous testing and
+            better integration patterns.
+        </div>
+        <div class="competencies">
+            <strong>Core Competencies:</strong> Node.js & React | SQL & Query Writing | RESTful APIs | TypeScript |
+            Systems Integration | Software Testing (QA)
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="job-section">
+            <div class="job-title">
+                <h3>Software Developer</h3>
+                <span class="date">February 2023 – Present</span>
+            </div>
+            <div class="company">Libex Marketplace | Centurion, South Africa</div>
+            <ul>
+                <li>I spearheaded the development of the <strong>Libertas Client Portal</strong>, a mission-critical
+                    management system. This involved building out dual-role interfaces for both admins and clients,
+                    ensuring seamless data flow and security.</li>
+                <li>My role included designing and maintaining custom analytics dashboards that provide real-time
+                    insights for enterprise clients.</li>
+                <li>I worked extensively on integrating full-stack survey platforms, handling everything from the React
+                    frontend to the Node.js API and MongoDB/SQL data layers.</li>
+                <li>I collaborated with cross-functional teams to deploy scalable solutions using Docker, focusing on
+                    maintaining high availability for our internal tools.</li>
+                <li>I also manage WordPress integrations, providing custom technical solutions to enhance platform
+                    functionality.</li>
+            </ul>
+            <div class="tech-stack">Technologies: Node.js, Express, React, Next.js, TypeScript, MongoDB, Firebase, SQL,
+                Docker, WordPress</div>
+        </div>
+
+        <div class="job-section">
+            <div class="job-title">
+                <h3>Salesperson <span style="font-weight: 400; font-size: 12px;">(Part-time)</span></h3>
+                <span class="date">June 2018 – Present</span>
+            </div>
+            <div class="company">AFLK Enterprise | South Africa</div>
+            <ul>
+                <li>Throughout my time here, I've honed my ability to solve problems under pressure and communicate
+                    technical concepts to non-technical clients. I pride myself on being a reliable team player who can
+                    adapt to any professional environment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="job-title">
+            <h3>IIE Rosebank College</h3>
+            <span class="date">2020 – 2023</span>
+        </div>
+        <div class="company">Bachelor's Degree/Diploma in Software Development</div>
+        <p style="font-size: 12px; margin-top: 8px;"><strong>Relevant Coursework:</strong> ASP.NET Development, Java
+            Programming, C# Programming, PHP Development, HTML/CSS, JavaScript, Android Studio Development, Data
+            Structures & Algorithms, Database Management</p>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <div class="cert-item">
+            <div class="cert-name">Algorithmic Toolbox</div>
+            <div class="cert-issuer">University of California San Diego – Issued March 2025</div>
+        </div>
+        <div class="cert-item">
+            <div class="cert-name">Google IT Support Professional Certificate</div>
+            <div class="cert-issuer">Google – Credential ID: U3EN51RQNY96</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Key Projects</h2>
+
+        <div class="project">
+            <h4>Libertas Client Portal | Production</h4>
+            <p>This is a production-grade system I built to handle complex client intake and reporting. It features a
+                custom analytics engine and automated data processing, helping the team manage hundreds of clients
+                efficiently.</p>
+            <div class="project-links">
+                <a href="https://libertas-client-portal.web.app/super-admin">Live Demo</a>
+                <span style="color: #9ca3af;">| Private Repository</span>
+            </div>
+            <div class="tech-stack">Tech Stack: React, Firebase, Docker, Custom Analytics Engine</div>
+        </div>
+
+        <div class="project">
+            <h4>Urban Tokenization Survey | Full-Stack Platform</h4>
+            <p>A data-heavy platform designed to collect and visualize survey results in real-time. I handled the entire
+                lifecycle from API development to the interactive data visualizations on the dashboard.</p>
+            <div class="project-links">
+                <a href="https://urban-tokenization-survey.vercel.app">Live Demo</a>
+                <a href="https://github.com/Faizal-Malek/urban-tokenization-survey">GitHub</a>
+            </div>
+            <div class="tech-stack">Tech Stack: React, TypeScript, Node.js, Express, MongoDB, Recharts</div>
+        </div>
+
+        <div class="project">
+            <h4>BHS Website | Commercial Project</h4>
+            <p>Modern, responsive commercial website built with HTML, Tailwind CSS, and JavaScript. Implemented custom
+                UI components and interactive features for enhanced user experience.</p>
+            <div class="tech-stack">Tech Stack: HTML, Tailwind CSS, JavaScript</div>
+        </div>
+
+        <div class="project">
+            <h4>Login & Signup System</h4>
+            <p>Robust authentication system implementing best practices with secure login and user registration. Session
+                management and user state persistence using Firebase Authentication.</p>
+            <div class="project-links">
+                <a href="https://loginsystem-fm.web.app">Live Demo</a>
+                <a href="https://github.com/Faizal-Malek/loginAndSignupSystem">GitHub</a>
+            </div>
+            <div class="tech-stack">Tech Stack: React, Firebase Authentication, Form Validation</div>
+        </div>
+
+        <div class="project">
+            <h4>YOUR-TIME-WISER | Hackathon Winner</h4>
+            <p>Hackathon-winning productivity and time management application for Android. Smart task tracking and time
+                management features for efficient workflow.</p>
+            <div class="project-links">
+                <a href="https://github.com/Faizal-Malek/YOUR-TIME-WISER">GitHub</a>
+            </div>
+            <div class="tech-stack">Tech Stack: Java, Android SDK</div>
+        </div>
+
+        <div class="project">
+            <h4>Blog-Node | Backend Platform</h4>
+            <p>Full-featured blog application backend with RESTful API architecture. CRUD operations and dynamic content
+                management.</p>
+            <div class="project-links">
+                <a href="https://github.com/Faizal-Malek/Blog-Node">GitHub</a>
+            </div>
+            <div class="tech-stack">Tech Stack: Node.js, Express, MongoDB</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Programming Languages</h4>
+                <div class="skill-list">TypeScript • JavaScript (ES6+) • Java • Python • PHP • C#</div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Frontend Development</h4>
+                <div class="skill-list">React • Next.js • Tailwind CSS • Framer Motion • HTML5 • CSS3 • SCSS •
+                    Responsive Design</div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Backend & Databases</h4>
+                <div class="skill-list">Node.js • Express • <strong>SQL & MS SQL Server (Query Writing)</strong> •
+                    MongoDB • Firebase • PostgreSQL • RESTful API Design</div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Tools & Quality</h4>
+                <div class="skill-list"><strong>Software Testing & QA</strong> • Git/GitHub • Docker • Kubernetes • Vite
+                    • CI/CD Pipelines • Microsoft Environment Familiarity</div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Frontend & Design</h4>
+                <div class="skill-list">React • Next.js • Tailwind CSS • Recharts (Data Visualization) • HTML5/CSS3 •
+                    Responsive Design</div>
+            </div>
+
+            <div class="skill-category">
+                <h4>Languages</h4>
+                <div class="skill-list">TypeScript • JavaScript (ES6+) • Python • Java • PHP • C#</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Soft Skills</h2>
+        <p style="font-size: 13px;">Proactive Problem Solver • Clear Professional Communication • Adaptable Learner •
+            Detail Oriented • Collaborative Team Member • Time Management Under Pressure</p>
+    </section>
+
+
+
+    <section>
+        <h2>Additional Information</h2>
+        <ul style="font-size: 13px;">
+            <li><strong>Languages:</strong> English (Professional Proficiency)</li>
+            <li><strong>Availability:</strong> Ready to start immediately and contribute to the team's success.</li>
+            <li><strong>Interests:</strong> Exploring Database Optimization, Open Source, and building tools that
+                simplify complex workflows.</li>
+        </ul>
+    </section>
+
+    <footer
+        style="margin-top: 30px; text-align: center; font-size: 11px; color: #9ca3af; border-top: 1px solid #e5e7eb; padding-top: 15px;">
+        <em>References available upon request</em>
+    </footer>
+</body>
+
+</html>

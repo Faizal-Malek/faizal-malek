@@ -9,34 +9,34 @@ const About: React.FC = () => {
   const qualities = [
     {
       icon: <FileCode className="h-6 w-6 text-primary" />,
-      title: "Technical Expertise",
+      title: "Full-Stack Development",
       description:
-        "Skilled in modern frameworks like React, Node.js, and Firebase with experience in building dynamic web applications and mobile apps.",
+        "Specializing in the React and Node.js ecosystem, with a deep focus on building scalable enterprise systems and secure APIs.",
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Team Collaboration",
+      title: "Systems Integration",
       description:
-        "Strong ability to collaborate across teams, delivering projects on time and within scope while maintaining clear communication.",
+        "Experienced in integrating diverse subsystems and ensuring seamless data flow between frontend, backend, and external services.",
     },
     {
       icon: <Lightbulb className="h-6 w-6 text-primary" />,
-      title: "Problem Solver",
+      title: "SQL & Data Optimization",
       description:
-        "Passionate about finding elegant solutions to complex problems through creative thinking and analytical approach.",
+        "Passionate about writing efficient SQL queries and managing relational databases like MS SQL Server for high-performance applications.",
     },
     {
       icon: <GitMerge className="h-6 w-6 text-primary" />,
-      title: "Continuous Learning",
+      title: "Quality Assurance",
       description:
-        "Dedicated to staying current with emerging technologies and constantly expanding skills to deliver cutting-edge solutions.",
+        "Committed to rigorous software testing and follow industry-standard quality assurance practices to deliver bug-free software.",
     },
   ];
 
   return (
     <Section id="about">
       <SectionTitle subtitle="ABOUT ME">
-        Passionate Software Developer
+        Junior Full-Stack Developer
       </SectionTitle>
 
       <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -59,13 +59,13 @@ const About: React.FC = () => {
         <FadeIn direction="left">
           <div className="space-y-4 p-6 rounded-xl bg-white shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 hover:scale-105 border-2 border-gray-50 group">
             <h6 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
-              Full-Stack Developer | Web3 Specialist | DevOps Enthusiast
+              Junior Full-Stack Developer | React & Node.js | SQL Enthusiast
             </h6>
             <p className="text-muted-foreground">
-              I am a highly motivated <strong>Software Developer</strong> with a strong focus on building production-grade <strong>Full-Stack applications</strong>, exploring <strong>Web3 technologies</strong>, and implementing <strong>DevOps practices</strong>. Experienced in <strong>React, Next.js, Node.js</strong>, and cloud integrations.
+              I am a results-oriented <strong>Software Developer</strong> with a solid foundation in building production-ready <strong>enterprise applications</strong>. My expertise lies in the <strong>React and Node.js ecosystem</strong>, complemented by a strong proficiency in <strong>SQL query writing</strong> and database management.
             </p>
             <p className="text-muted-foreground">
-              Passionate about creating scalable, user-centric solutions and leveraging data visualization to drive insights. Committed to continuous learning with recent certifications in <strong>Algorithmic Toolbox</strong> and <strong>Google IT Support</strong>. I bring expertise in <strong>TypeScript, Docker, Kubernetes</strong>, and modern frameworks to every project.
+              I take pride in creating scalable, user-centric solutions that provide clear insights through data visualization. I am particularly interested in <strong>systems integration</strong> and maintaining high <strong>code quality</strong> through software testing. I thrive in collaborative environments and am always eager to learn and adapt to new technologies.
             </p>
 
             <div className="grid grid-cols-2 gap-4 mt-8 p-4 rounded-lg bg-gray-50/50">
