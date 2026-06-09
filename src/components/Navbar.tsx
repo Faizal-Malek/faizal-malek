@@ -22,12 +22,10 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
       
-      // Get all sections for tracking active section
       const sections = NAV_ITEMS.map(item => 
         document.querySelector(item.href) as HTMLElement
       ).filter(Boolean);
       
-      // Find the section that is currently in view
       const currentSection = sections.find(section => {
         const rect = section.getBoundingClientRect();
         return rect.top <= 100 && rect.bottom >= 100;
@@ -42,7 +40,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close menu when clicking a link (mobile)
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -52,67 +49,62 @@ const Navbar: React.FC = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-500",
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl shadow-lg border-b border-gray-100"
-          : "bg-transparent"
+          ? "bg-black/40 backdrop-blur-xl border-b border-white/5 py-2"
+          : "bg-transparent py-4"
       )}
     >
-      <div className="section-container py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="group flex items-center gap-2 text-xl font-bold tracking-tight"
+            className="group flex items-center gap-2 text-xl font-bold tracking-tighter font-mono"
           >
             <div className="relative">
-              <span className="relative z-10 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x">
-                Faizal Malek
+              <span className="relative z-10 text-white group-hover:text-emerald-400 transition-colors duration-300">
+                {`FM_DEV.EXE`}
               </span>
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg blur opacity-0 group-hover:opacity-20 transition duration-500"></div>
             </div>
           </a>
 
           {/* Desktop menu */}
-          <nav className="hidden md:flex items-center">
-            <div className={cn(
-              "flex items-center gap-1 px-2 py-2 rounded-full transition-all duration-300",
-              isScrolled && "bg-gray-50/50"
-            )}>
+          <nav className="hidden md:flex items-center gap-8">
+            <div className="flex items-center gap-2">
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-300",
+                    "relative px-4 py-2 text-[11px] font-mono tracking-widest uppercase transition-all duration-300",
                     activeSection === item.href
-                      ? "text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                      ? "text-emerald-400"
+                      : "text-gray-400 hover:text-white"
                   )}
                 >
-                  {item.label}
+                  {`[ ${item.label} ]`}
+                  {activeSection === item.href && (
+                    <span className="absolute bottom-0 left-0 w-full h-[1px] bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,1)]" />
+                  )}
                 </a>
               ))}
             </div>
             <a
               href="#contact"
-              className="ml-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-medium transform transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 relative overflow-hidden group"
+              className="px-6 py-2 rounded-md bg-emerald-600/10 border border-emerald-500/50 text-emerald-400 text-xs font-mono tracking-widest hover:bg-emerald-600 hover:text-white transition-all duration-300"
             >
-              <span className="relative z-10">Contact Me</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              RUN_CONTACT()
             </a>
           </nav>
 
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className={cn(
-              "md:hidden focus-ring rounded-full p-2.5 transition-all duration-300",
-              isScrolled ? "bg-gray-100 hover:bg-gray-200" : "bg-white/50 backdrop-blur-sm hover:bg-white/80"
-            )}
+            className="md:hidden focus-ring rounded-lg p-2 bg-white/5 border border-white/10"
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X size={20} className="text-gray-700" />
+              <X size={20} className="text-emerald-400" />
             ) : (
-              <Menu size={20} className="text-gray-700" />
+              <Menu size={20} className="text-emerald-400" />
             )}
           </button>
         </div>
@@ -121,20 +113,20 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden absolute w-full bg-white/95 backdrop-blur-xl border-b border-gray-100 transition-all duration-300 ease-in-out shadow-lg",
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+          "md:hidden absolute w-full bg-[#050505]/95 backdrop-blur-2xl border-b border-white/5 transition-all duration-300 ease-in-out",
+          isOpen ? "max-h-screen opacity-100 py-8" : "max-h-0 opacity-0 pointer-events-none"
         )}
       >
-        <nav className="flex flex-col py-4 px-4 gap-2">
+        <nav className="flex flex-col items-center gap-4">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.href}
               href={item.href}
               className={cn(
-                "py-3 px-4 rounded-xl transition-all duration-200 font-medium",
+                "py-2 px-8 text-xs font-mono tracking-[0.2em] uppercase transition-all duration-200",
                 activeSection === item.href
-                  ? "text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-md"
-                  : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                  ? "text-emerald-400"
+                  : "text-gray-500"
               )}
               onClick={handleLinkClick}
             >
@@ -143,10 +135,10 @@ const Navbar: React.FC = () => {
           ))}
           <a
             href="#contact"
-            className="mt-2 mx-4 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-medium text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+            className="mt-4 px-10 py-3 rounded-md bg-emerald-600 text-white text-xs font-mono tracking-widest"
             onClick={handleLinkClick}
           >
-            Contact Me
+            CONTACT_ME
           </a>
         </nav>
       </div>

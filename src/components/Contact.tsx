@@ -28,167 +28,141 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // EmailJS service configuration
     const serviceId = 'default_service';
     const templateId = 'template_36joyj9';
-    const publicKey = 'sIlTFGn5hT9PybRH_'; // EmailJS public key
+    const publicKey = 'sIlTFGn5hT9PybRH_';
     
     if (formRef.current) {
       emailjs.sendForm(serviceId, templateId, formRef.current, publicKey)
         .then((result) => {
-          console.log('Email sent successfully:', result.text);
-          toast.success("Message sent successfully!");
-          
-          // Reset form
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
+          toast.success("TRANSMISSION_SUCCESSFUL: Message received.");
+          setFormData({ name: "", email: "", subject: "", message: "" });
         })
         .catch((error) => {
-          console.error('Error sending email:', error.text);
-          toast.error("Failed to send email. Please try again later.");
+          toast.error("ERROR: Transmission failed. Check your uplink.");
         })
         .finally(() => {
           setIsSubmitting(false);
         });
-    } else {
-      toast.error("Something went wrong. Please try again.");
-      setIsSubmitting(false);
     }
   };
 
   return (
-    <Section id="contact" className="">
-      <SectionTitle subtitle="GET IN TOUCH">Contact Me</SectionTitle>
+    <Section id="contact" className="bg-[#050505]">
+      <SectionTitle subtitle="COMMUNICATION_UPLINK">Contact Me</SectionTitle>
 
-      <div className="grid lg:grid-cols-2 gap-2 shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.01),_10px_10px_30px_4px_rgba(210,210,210)] rounded-lg p-[20px]">
+      <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
         <FadeIn direction="right">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-medium">Let's Talk</h3>
-            <p className="text-muted-foreground">
-              Feel free to reach out if you're looking for a developer, have a
-              question, or just want to connect.
-            </p>
-
-            <div className="space-y-4 mt-8">
-              <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Location</h4>
-                  <p className="text-muted-foreground">Erasmia, Pretoria, South Africa</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group p-4 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Email</h4>
-                  <a
-                    href="mailto:faizalmalek03@icloud.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    faizalmalek03@icloud.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group p-4 rounded-lg border border-gradient-to-r from-blue-500/20 to-purple-500/20 hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-all duration-300 shadow-sm hover:shadow-md">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center shrink-0 text-white transform group-hover:scale-110 transition-all duration-300">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium group-hover:text-primary transition-colors duration-300">Phone</h4>
-                  <a
-                    href="tel:0760205904"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    076 020 5904
-                  </a>
-                </div>
-              </div>
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h3 className="text-3xl font-bold text-white tracking-tighter uppercase font-mono">{`> INITIALIZE_CHAT`}</h3>
+              <p className="text-gray-400 font-light leading-relaxed">
+                Ready to collaborate on your next digital venture. Drop a message via the uplink and I'll respond within one business cycle.
+              </p>
             </div>
 
-            <div className="space-y-4 shadow-lg rounded-lg p-8 bg-gradient-to-r from-white to-gray-50/80 border-2 border-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-sm hover:shadow-xl transition-all duration-300">
-              <h4 className="font-medium">Open to Opportunities</h4>
-              <p className="text-sm text-muted-foreground">
-                I'm currently looking for new opportunities as a Java Developer, but I'm open to discussing other roles that match my skills and experience.
+            <div className="space-y-4">
+              {[
+                { icon: <MapPin />, label: "LOCATION", value: "Pretoria, South Africa" },
+                { icon: <Mail />, label: "EMAIL", value: "faizalmalek03@icloud.com", href: "mailto:faizalmalek03@icloud.com" },
+                { icon: <Phone />, label: "PHONE", value: "076 020 5904", href: "tel:0760205904" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-6 p-6 rounded-xl bg-white/5 border border-white/10 group hover:border-emerald-500/50 transition-all duration-300">
+                  <div className="h-12 w-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
+                    {React.cloneElement(item.icon as React.ReactElement, { className: "h-5 w-5" })}
+                  </div>
+                  <div>
+                    <h4 className="text-[10px] font-mono tracking-widest text-emerald-500/50 uppercase">{item.label}</h4>
+                    {item.href ? (
+                      <a href={item.href} className="text-white hover:text-emerald-400 transition-colors font-medium">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-white font-medium">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="p-8 rounded-xl bg-emerald-500/5 border border-emerald-500/20 backdrop-blur-sm group hover:bg-emerald-500/10 transition-all duration-500">
+              <h4 className="font-mono text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">SYSTEM_STATUS</h4>
+              <p className="text-sm text-gray-500 leading-relaxed font-light">
+                Actively seeking opportunities in <span className="text-white">Full-Stack Engineering</span> and <span className="text-white">Web Development</span>. Available for remote and hybrid roles.
               </p>
             </div>
           </div>
         </FadeIn>
 
         <FadeIn direction="left">
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6 p-8 rounded-xl bg-white/80 shadow-xl border-2 border-gradient-to-r from-blue-500/30 to-purple-500/30 backdrop-blur-sm hover:shadow-2xl transition-all duration-300 h-full">
-            <div className="grid sm:grid-cols-2 gap-6">
-              <div className="space-y-2 w-full">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500 h-full">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <label className="text-[10px] font-mono tracking-widest text-gray-500 ml-1 uppercase">Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your Name"
+                  placeholder="USER_NAME"
                   required
-                  className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
+                  className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
                 />
               </div>
-              <div className="space-y-2 w-full">
+              <div className="space-y-1">
+                <label className="text-[10px] font-mono tracking-widest text-gray-500 ml-1 uppercase">Email</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Your Email"
+                  placeholder="USER_EMAIL"
                   required
-                  className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
+                  className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
                 />
               </div>
             </div>
 
-            <div className="space-y-2 w-full">
+            <div className="space-y-1">
+              <label className="text-[10px] font-mono tracking-widest text-gray-500 ml-1 uppercase">Subject</label>
               <input
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="Subject"
+                placeholder="MESSAGE_SUBJECT"
                 required
-                className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base"
+                className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
               />
             </div>
 
-            <div className="space-y-2 w-full">
+            <div className="space-y-1">
+              <label className="text-[10px] font-mono tracking-widest text-gray-500 ml-1 uppercase">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Your Message"
+                placeholder="TYPE_YOUR_MESSAGE_HERE..."
                 required
-                rows={8}
-                className="w-full px-6 py-4 rounded-xl border-2 border-gray-200 bg-gray-50/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 hover:border-purple-500/50 placeholder-gray-400 text-base resize-none"
+                rows={6}
+                className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700 resize-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-xl inline-flex items-center justify-center rounded-xl px-8 py-4 font-medium transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:pointer-events-none disabled:opacity-50 border-2 border-transparent hover:border-white/20 text-base"
+              className="w-full mt-4 bg-emerald-600 text-white py-5 rounded-lg font-mono text-xs tracking-[0.3em] uppercase hover:bg-emerald-500 transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] disabled:opacity-50 group flex items-center justify-center gap-3"
             >
               {isSubmitting ? (
                 <>
-                  <Loader2 className="mr-2 h-5 w-5 animate-spin text-white" />
-                  Sending...
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  TRANSMITTING...
                 </>
               ) : (
                 <>
-                  <Send className="mr-2 h-5 w-5 text-white" />
-                  Send Message
+                  <Send className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  SEND_MESSAGE
                 </>
               )}
             </button>

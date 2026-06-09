@@ -21,91 +21,85 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background/20 pointer-events-none" />
-
-      {/* Floating particles */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 overflow-hidden bg-[#050505]">
+      {/* Liquid glass background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 10}s`,
-            }}
-          />
-        ))}
+        <div 
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-emerald-500/10 blur-[120px] animate-pulse"
+          style={{
+            transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+          }}
+        />
+        <div 
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-emerald-900/10 blur-[150px] animate-pulse"
+          style={{
+            transform: `translate(${-mousePosition.x}px, ${-mousePosition.y}px)`,
+          }}
+        />
       </div>
 
       <div className="section-container text-center z-10">
         <FadeIn delay={200}>
-          <div className="inline-flex items-center gap-2 px-5 py-2 mb-6 text-xs font-medium tracking-wider text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl backdrop-blur-sm border border-white/20 group">
-            <Sparkles className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
-            <span>Full-Stack Developer</span>
-            <Code2 className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+          <div className="inline-flex items-center gap-2 px-5 py-2 mb-6 text-xs font-mono tracking-widest text-emerald-400 bg-white/5 backdrop-blur-md rounded-full transform hover:scale-105 transition-all duration-300 border border-emerald-500/30 group">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>SOFTWARE DEVELOPER</span>
+            <Code2 className="w-4 h-4" />
           </div>
         </FadeIn>
 
         <FadeIn delay={400} className="mb-8">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-            <span className="block bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-6">
+            <span className="block text-white/50 font-light">
               Hi, I'm
             </span>
             <div className="relative inline-block">
               <TypewriterEffect
                 text="Faizal Malek"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient-x"
+                className="text-white drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]"
                 delay={800}
                 speed={150}
               />
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
             </div>
           </h1>
-          <p className="text-base md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
-            Building reliable <span className="font-semibold text-blue-600">enterprise software</span> and <span className="font-semibold text-purple-600">scalable web systems</span> with modern technologies
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-light font-mono">
+            {`> `}Building <span className="text-emerald-400">robust web systems</span> and <span className="text-white">scalable interfaces</span> with surgical precision.
           </p>
         </FadeIn>
 
         <FadeIn delay={800}>
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <a
-              href="#about"
-              className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl overflow-hidden"
+              href="#projects"
+              className="group relative px-10 py-4 rounded-lg bg-emerald-600 text-white font-mono text-sm tracking-widest overflow-hidden transition-all duration-300 hover:bg-emerald-500 hover:shadow-[0_0_30px_rgba(16,185,129,0.4)]"
             >
               <span className="relative z-10 flex items-center gap-2">
-                View My Work
-                <Rocket className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                VIEW_PORTFOLIO
+                <Rocket className="w-4 h-4 group-hover:translate-y-[-2px] transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a
               href="#contact"
-              className="group relative px-8 py-4 rounded-full bg-white text-gray-900 font-medium border-2 border-gray-200 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl overflow-hidden"
+              className="group relative px-10 py-4 rounded-lg bg-white/5 text-white font-mono text-sm tracking-widest border border-white/10 overflow-hidden transition-all duration-300 hover:bg-white/10 backdrop-blur-md"
             >
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">
-                Contact Me
+              <span className="relative z-10">
+                GET_IN_TOUCH
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
         </FadeIn>
 
-        {/* Tech stack floating icons */}
+        {/* Tech stack floating icons - Glassmorphism */}
         <FadeIn delay={1000}>
-          <div className="flex justify-center items-center gap-6 mt-12 flex-wrap">
-            {['React', 'Node.js', 'SQL', 'TypeScript', 'Tailwind'].map((tech, i) => (
+          <div className="flex justify-center items-center gap-4 mt-16 flex-wrap">
+            {['React', 'Node.js', 'SQL', 'TypeScript', 'Docker', 'PHP'].map((tech, i) => (
               <div
                 key={tech}
-                className="px-4 py-2 rounded-lg bg-white/50 backdrop-blur-sm border border-gray-200 text-sm font-medium text-gray-700 hover:bg-white hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md"
+                className="px-6 py-2 rounded-md bg-white/5 backdrop-blur-md border border-white/10 text-[10px] font-mono tracking-widest text-emerald-400/70 hover:text-emerald-400 hover:border-emerald-500/50 hover:scale-110 transition-all duration-300"
                 style={{
                   animationDelay: `${i * 100}ms`,
                 }}
               >
-                {tech}
+                {`[ ${tech} ]`}
               </div>
             ))}
           </div>
@@ -114,36 +108,12 @@ const Hero: React.FC = () => {
 
       <FadeIn
         delay={1200}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
-        <a href="#about" className="focus-ring rounded-full p-3 bg-white/50 backdrop-blur-sm shadow-lg hover:bg-white hover:scale-110 transition-all duration-300">
-          <ArrowDownIcon className="h-6 w-6 text-gray-700" />
+        <a href="#about" className="focus-ring rounded-full p-4 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+          <ArrowDownIcon className="h-5 w-5 text-emerald-500 group-hover:translate-y-1 transition-transform" />
         </a>
       </FadeIn>
-
-      {/* Enhanced background gradient elements with parallax */}
-      <div
-        className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl opacity-30 animate-pulse"
-        style={{
-          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          transition: 'transform 0.5s ease-out',
-        }}
-      />
-      <div
-        className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl opacity-30 animate-pulse"
-        style={{
-          transform: `translate(${-mousePosition.x}px, ${-mousePosition.y}px)`,
-          transition: 'transform 0.5s ease-out',
-          animationDelay: '1s',
-        }}
-      />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-pink-500/10 blur-3xl opacity-20"
-        style={{
-          transform: `translate(calc(-50% + ${mousePosition.x * 0.5}px), calc(-50% + ${mousePosition.y * 0.5}px))`,
-          transition: 'transform 0.8s ease-out',
-        }}
-      />
     </section>
   );
 };

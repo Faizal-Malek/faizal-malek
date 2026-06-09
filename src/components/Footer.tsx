@@ -14,7 +14,7 @@ const SocialLink: React.FC<SocialLinkProps> = ({ href, icon, label }) => (
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+    className="h-10 w-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all duration-300"
     aria-label={label}
   >
     {icon}
@@ -25,17 +25,14 @@ const Footer: React.FC = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-0">
-      <div className="items-center justify-center p-3 bg-background/80 backdrop-blur-sm">
-    <div className="shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg bg-gradient-to-r from-background to-background/95 hover:from-background/95 hover:to-background">
-
-      <div className="section-container ">
+    <footer className="bg-[#050505] border-t border-white/5">
+      <div className="section-container py-12">
         <div className="flex flex-col items-center">
-          <a href="#" className="text-lg font-bold tracking-tight mb-8 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:scale-105 transform transition-all duration-300">
-            Faizal Malek
+          <a href="#" className="text-xl font-bold tracking-tighter font-mono text-white hover:text-emerald-400 transition-colors duration-300 mb-8">
+            {`FM_DEV.EXE`}
           </a>
 
-          <div className="flex space-x-4 mb-8">
+          <div className="flex space-x-4 mb-10">
             <SocialLink
               href="https://github.com/faizal-malek"
               icon={<Github className="h-5 w-5" />}
@@ -53,50 +50,27 @@ const Footer: React.FC = () => {
             />
           </div>
 
-          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8">
-            <a
-              href="#about"
-              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
-            >
-              About
-            </a>
-            <a
-              href="#experience"
-              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
-            >
-              Experience
-            </a>
-            <a
-              href="#skills"
-              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
-            >
-              Skills
-            </a>
-            <a
-              href="#projects"
-              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-sm text-muted-foreground hover:text-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:bg-clip-text transition-colors duration-300"
-            >
-              Contact
-            </a>
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10 font-mono text-[10px] tracking-[0.2em] uppercase">
+            {["About", "Experience", "Skills", "Projects", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-gray-500 hover:text-emerald-400 transition-colors duration-300"
+              >
+                {item}
+              </a>
+            ))}
           </nav>
 
-          <div className="text-sm text-muted-foreground text-center">
+          <div className="text-[10px] font-mono tracking-widest text-gray-600 text-center uppercase">
             <p>
-              &copy; {year} Faizal Malek. All rights reserved.
+              {`// © ${year} FAIZAL MALEK. ALL_RIGHTS_RESERVED.`}
             </p>
-            <p className="mt-1">
-              Software Developer based in Pretoria, South Africa
+            <p className="mt-2 text-emerald-900">
+              {`LOC: PRETORIA_ZA | STACK: REACT_NODE_DOCKER`}
             </p>
           </div>
         </div>
-      </div>
-      </div>
       </div>
     </footer>
   );

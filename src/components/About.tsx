@@ -8,103 +8,105 @@ import { FileCode, Users, Lightbulb, GitMerge } from "lucide-react";
 const About: React.FC = () => {
   const qualities = [
     {
-      icon: <FileCode className="h-6 w-6 text-primary" />,
-      title: "Full-Stack Development",
+      icon: <FileCode className="h-6 w-6" />,
+      title: "Full-Stack Engineering",
       description:
-        "Specializing in the React and Node.js ecosystem, with a deep focus on building scalable enterprise systems and secure APIs.",
+        "Building production-ready applications across the entire stack, from reactive frontends to robust server-side logic.",
     },
     {
-      icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Systems Integration",
+      icon: <Users className="h-6 w-6" />,
+      title: "Agile Collaboration",
       description:
-        "Experienced in integrating diverse subsystems and ensuring seamless data flow between frontend, backend, and external services.",
+        "Experienced in working within cross-functional teams using Agile methodologies to deliver high-quality software.",
     },
     {
-      icon: <Lightbulb className="h-6 w-6 text-primary" />,
-      title: "SQL & Data Optimization",
+      icon: <Lightbulb className="h-6 w-6" />,
+      title: "Problem Solving",
       description:
-        "Passionate about writing efficient SQL queries and managing relational databases like MS SQL Server for high-performance applications.",
+        "Passionate about the problem-solving side of development, staying curious about how things work under the hood.",
     },
     {
-      icon: <GitMerge className="h-6 w-6 text-primary" />,
-      title: "Quality Assurance",
+      icon: <GitMerge className="h-6 w-6" />,
+      title: "DevOps & Deployment",
       description:
-        "Committed to rigorous software testing and follow industry-standard quality assurance practices to deliver bug-free software.",
+        "Utilizing Docker and modern CI/CD practices to ensure consistent and reliable deployments across environments.",
     },
   ];
 
   return (
-    <Section id="about">
-      <SectionTitle subtitle="ABOUT ME">
-        Junior Full-Stack Developer
+    <Section id="about" className="bg-[#050505]">
+      <SectionTitle subtitle="SYSTEM_MANIFESTO">
+        Software Developer
       </SectionTitle>
 
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
         <FadeIn direction="right">
           <div className="relative group">
-            <div className="aspect-square bg-muted rounded-xl overflow-hidden shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] group-hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 group-hover:scale-105">
+            <div className="aspect-square bg-[#111] rounded-2xl overflow-hidden border border-white/10 group-hover:border-emerald-500/50 transition-all duration-500 hover:shadow-[0_0_50px_rgba(16,185,129,0.1)]">
               <div className="relative w-full h-full">
                 <img
                   src="/asset/Faizal.jpg"
                   alt="Faizal Malek"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             </div>
-            <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full border-2 border-primary/20 rounded-xl" />
+            {/* Liquid glass accent */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-500/20 blur-[60px] animate-pulse -z-10" />
           </div>
         </FadeIn>
 
         <FadeIn direction="left">
-          <div className="space-y-4 p-6 rounded-xl bg-white shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 hover:scale-105 border-2 border-gray-50 group">
-            <h6 className="text-xl font-semibold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent group-hover:text-primary transition-colors duration-300">
-              Junior Full-Stack Developer | React & Node.js Developer | SQL Enthusiast
+          <div className="space-y-6 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl group hover:border-emerald-500/30 transition-all duration-500">
+            <h6 className="text-xl font-bold text-white font-mono tracking-tight group-hover:text-emerald-400 transition-colors duration-300 uppercase">
+              {`[ dev_profile ]`}
             </h6>
-            <p className="text-muted-foreground">
-              I am a results-oriented <strong>Software Developer</strong> with a solid foundation in building production-ready <strong>enterprise applications</strong>. My expertise lies in the <strong>React and Node.js ecosystem</strong>, complemented by a strong proficiency in <strong>SQL query writing</strong> and database management.
-            </p>
-            <p className="text-muted-foreground">
-              I take pride in creating scalable, user-centric solutions that provide clear insights through data visualization. I am particularly interested in <strong>systems integration</strong> and maintaining high <strong>code quality</strong> through software testing. I thrive in collaborative environments and am always eager to learn and adapt to new technologies.
-            </p>
+            <div className="space-y-4">
+              <p className="text-gray-400 leading-relaxed font-light">
+                I'm a <span className="text-white font-medium">software developer</span> based in Pretoria with a few years of experience building things for the web — mostly on the front end, though I'm comfortable working across the stack.
+              </p>
+              <p className="text-gray-400 leading-relaxed font-light">
+                I got into development through a three-year IT diploma at <span className="text-emerald-500/80">Rosebank College</span> and have been hands-on ever since, working across contract and full-time roles while picking up new tools as projects demanded them.
+              </p>
+              <p className="text-gray-400 leading-relaxed font-light">
+                I enjoy the <span className="text-emerald-400">problem-solving</span> side of development as much as the building side, and I tend to stay curious about how things work under the hood.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8 p-4 rounded-lg bg-gray-50/50">
-              <div className="space-y-1 p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-colors duration-300">
-                <p className="text-sm font-medium text-muted-foreground">Name</p>
-                <p className="font-medium">Faizal Malek</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 p-6 rounded-xl bg-white/5 border border-white/5 font-mono text-[11px]">
+              <div className="space-y-1">
+                <p className="text-emerald-500/50 uppercase tracking-widest">Name</p>
+                <p className="text-white">Faizal Malek</p>
               </div>
-              <div className="space-y-1 p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-colors duration-300">
-                <p className="text-sm font-medium text-muted-foreground">Location</p>
-                <p className="font-medium">Erasmia, Pretoria</p>
+              <div className="space-y-1">
+                <p className="text-emerald-500/50 uppercase tracking-widest">Location</p>
+                <p className="text-white">Pretoria, ZA</p>
               </div>
-              <div className="space-y-1 p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-colors duration-300">
-                <p className="text-sm font-medium text-muted-foreground">Email</p>
-                <a href="mailto:faizalmalek03@icloud.com" className="font-medium hover:text-primary transition-colors duration-300">
-                  faizalmalek03@icloud.com
-                </a>
+              <div className="space-y-1">
+                <p className="text-emerald-500/50 uppercase tracking-widest">Status</p>
+                <p className="text-emerald-400 animate-pulse">AVAILABLE_FOR_WORK</p>
               </div>
-              <div className="space-y-1 p-3 rounded-lg hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-purple-500/10 transition-colors duration-300">
-                <p className="text-sm font-medium text-muted-foreground">Phone</p>
-                <a href="tel:0760205904" className="font-medium hover:text-primary transition-colors duration-300">
-                  076 020 5904
-                </a>
+              <div className="space-y-1">
+                <p className="text-emerald-500/50 uppercase tracking-widest">Focus</p>
+                <p className="text-white">Web Engineering</p>
               </div>
             </div>
           </div>
         </FadeIn>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
         {qualities.map((quality, index) => (
           <FadeIn key={index} delay={index * 100}>
-            <div className="group bg-white rounded-lg shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] hover:shadow-[-15px_-15px_35px_4px_rgba(0,0,0,0.15),_15px_15px_35px_4px_rgba(45,78,255,0.2)] transition-all duration-300 p-6 border-2 border-gray-50">
-              <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center mb-4 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 transition-all duration-300 transform group-hover:scale-110">
-                <div className="group-hover:text-white transition-colors duration-300">
+            <div className="group bg-white/5 border border-white/10 backdrop-blur-md rounded-xl p-8 hover:border-emerald-500/50 transition-all duration-500 h-full shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
+              <div className="h-14 w-14 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500 transform group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.5)]">
+                <div className="text-emerald-400 group-hover:text-white transition-colors duration-300">
                   {quality.icon}
                 </div>
               </div>
-              <h3 className="text-lg font-medium mb-2 group-hover:text-primary transition-colors duration-300">{quality.title}</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300 font-mono tracking-tighter uppercase">{quality.title}</h3>
+              <p className="text-sm text-gray-500 leading-relaxed font-light">
                 {quality.description}
               </p>
             </div>
