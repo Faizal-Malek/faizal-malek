@@ -2,8 +2,7 @@
 import React, { useEffect, useState } from "react";
 import TypewriterEffect from "./TypewriterEffect";
 import FadeIn from "./FadeIn";
-import { ArrowDownIcon, Sparkles, Code2, Rocket } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Code2, Rocket } from "lucide-react";
 
 const TECH_STACK = [
   "React",
@@ -119,14 +118,6 @@ const Hero: React.FC = () => {
         </FadeIn>
       </div>
 
-      <FadeIn
-        delay={1200}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <a href="#about" className="focus-ring rounded-full p-4 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-          <ArrowDownIcon className="h-5 w-5 text-emerald-500 group-hover:translate-y-1 transition-transform" />
-        </a>
-      </FadeIn>
     </section>
   );
 };
