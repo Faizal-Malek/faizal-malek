@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
+import InteractiveGrid from "@/components/InteractiveGrid";
 
 const Index = () => {
   useEffect(() => {
@@ -25,10 +26,15 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#050505] relative overflow-x-hidden">
       <CustomCursor />
+      
+      {/* Background Interactive Elements */}
+      <InteractiveGrid position="top-right" />
+      <InteractiveGrid position="bottom-left" />
+
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Hero />
         <About />
         <Experience />
