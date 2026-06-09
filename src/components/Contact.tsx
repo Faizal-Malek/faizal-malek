@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
             <div className="p-8 rounded-xl bg-emerald-500/5 border border-emerald-500/20 backdrop-blur-sm group hover:bg-emerald-500/10 transition-all duration-500">
               <h4 className="font-mono text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">SYSTEM_STATUS</h4>
               <p className="text-sm text-gray-500 leading-relaxed font-light">
-                Actively seeking opportunities in <span className="text-white">Full-Stack Engineering</span> and <span className="text-white">Web Development</span>. Available for remote and hybrid roles.
+                Actively seeking opportunities in <span className="text-white">Full-Stack Engineering</span> and <span className="text-white">Web Development</span>. Available for remote, hybrid and on site roles.
               </p>
             </div>
           </div>
