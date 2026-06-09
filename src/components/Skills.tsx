@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
     {
       title: "Languages",
       icon: <Code className="h-6 w-6" />,
-      skills: ["JavaScript (ES6+)", "HTML5", "CSS3/SCSS", "PHP", "Java", "SQL"],
+      skills: ["JavaScript (ES6+)", "TypeScript", "Python", "Java", "PHP", "C#", "SQL", "HTML5", "CSS3/SCSS"],
     },
     {
       title: "Frameworks",
@@ -68,7 +68,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <Section id="skills" className="bg-[#050505]">
+    <Section id="skills" className="bg-[#050505]/88">
       <SectionTitle subtitle="CORE_COMPETENCIES">Technical Expertise</SectionTitle>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

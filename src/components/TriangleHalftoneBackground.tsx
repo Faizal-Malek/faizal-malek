@@ -57,21 +57,22 @@ const buildTriangleMarks = (): TriangleMark[] => {
   const marks: TriangleMark[] = [];
   let id = 0;
 
-  for (let y = -2; y <= 102; y += 4.15) {
-    const row = Math.round((y + 2) / 4.15);
-    const offset = row % 2 === 0 ? 0 : 2.65;
+  for (let y = -2; y <= 102; y += 3.35) {
+    const row = Math.round((y + 2) / 3.35);
+    const offset = row % 2 === 0 ? 0 : 2.1;
 
-    for (let x = -2 + offset; x <= 102; x += 5.3) {
-      const jitterX = (seededNoise(x, y, 1) - 0.5) * 1.4;
-      const jitterY = (seededNoise(x, y, 2) - 0.5) * 1.1;
+    for (let x = -2 + offset; x <= 102; x += 4.25) {
+      const jitterX = (seededNoise(x, y, 1) - 0.5) * 1.15;
+      const jitterY = (seededNoise(x, y, 2) - 0.5) * 0.95;
       const px = x + jitterX;
       const py = y + jitterY;
+
       const centerDistance = Math.hypot(px - CENTER_X, py - CENTER_Y);
       const centerFade = smoothstep(14, 49, centerDistance);
       const edgeDistance = Math.min(px, py, 100 - px, 100 - py);
       const edgeIntensity = clamp((34 - edgeDistance) / 34, 0, 1) ** 1.22;
 
-      const intensity =
+      const intensity = Math.max(
         Math.max(
           edgeIntensity,
           gaussian(px, py, 18, 72, 18, 17) * 0.82,
@@ -80,19 +81,21 @@ const buildTriangleMarks = (): TriangleMark[] => {
           gaussian(px, py, 31, 3, 38, 8) * 0.68,
           gaussian(px, py, 66, 98, 42, 8) * 0.76,
         ) *
-        (0.22 + centerFade * 0.78);
+          (0.22 + centerFade * 0.78),
+        0.075,
+      );
 
-      if (intensity < 0.055) {
+      if (intensity < 0.04) {
         continue;
       }
 
-      const density = clamp(0.08 + intensity * 0.86, 0, 0.94);
+      const density = clamp(0.32 + intensity * 0.66, 0.3, 0.96);
       if (seededNoise(px, py, 3) > density) {
         continue;
       }
 
-      const size = 4.5 + intensity * 33 + seededNoise(px, py, 4) * 7;
-      const direction = (row + Math.round(x / 5.3)) % 2 === 0 ? "left" : "right";
+      const size = 4.4 + intensity * 27 + seededNoise(px, py, 4) * 5.2;
+      const direction = (row + Math.round(x / 4.25)) % 2 === 0 ? "left" : "right";
       const angle = (seededNoise(px, py, 5) - 0.5) * 8;
       const tone = Math.round(clamp(230 - intensity * 105, 118, 226));
 
@@ -102,7 +105,7 @@ const buildTriangleMarks = (): TriangleMark[] => {
         y: clamp(py, -1.5, 101.5),
         size,
         tone,
-        opacity: clamp(0.06 + intensity * 0.48, 0.06, 0.54),
+        opacity: clamp(0.05 + intensity * 0.39, 0.05, 0.44),
         direction,
         angle,
         mobileHidden: intensity < 0.34,
@@ -121,10 +124,12 @@ const baseTransform = (mark: TriangleMark) =>
 
 const TriangleHalftoneBackground: React.FC = () => {
   const marks = useMemo(buildTriangleMarks, []);
+  const layerRef = useRef<HTMLDivElement | null>(null);
   const pieceRefs = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
     let frame = 0;
+    let scrollFrame = 0;
     let mouseX = -1000;
     let mouseY = -1000;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -189,45 +194,77 @@ const TriangleHalftoneBackground: React.FC = () => {
       }
     };
 
+    const updateScroll = () => {
+      scrollFrame = 0;
+
+      if (!layerRef.current) {
+        return;
+      }
+
+      const offset = reducedMotion ? 0 : window.scrollY * -0.045;
+      const scale = reducedMotion
+        ? 1
+        : 1 + Math.min(window.scrollY, 1800) / 1800 * 0.012;
+
+      layerRef.current.style.transform = `translate3d(0, ${offset}px, 0) scale(${scale})`;
+    };
+
+    const handleScroll = () => {
+      if (!scrollFrame) {
+        scrollFrame = window.requestAnimationFrame(updateScroll);
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     window.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    updateScroll();
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("scroll", handleScroll);
       if (frame) {
         window.cancelAnimationFrame(frame);
+      }
+      if (scrollFrame) {
+        window.cancelAnimationFrame(scrollFrame);
       }
     };
   }, [marks]);
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-20 overflow-hidden"
+      className="pointer-events-none fixed -inset-[8vmax] z-0 overflow-hidden opacity-80"
       aria-hidden="true"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_54%_49%,rgba(255,255,255,0.025),transparent_42%)]" />
-      {marks.map((mark, index) => (
-        <div
-          key={mark.id}
-          ref={(piece) => {
-            pieceRefs.current[index] = piece;
-          }}
-          className={cn(
-            "triangle-halftone-piece",
-            mark.direction === "left" ? "clip-triangle-left" : "clip-triangle-right",
-            mark.mobileHidden && "hidden sm:block",
-          )}
-          style={{
-            left: `${mark.x}%`,
-            top: `${mark.y}%`,
-            width: `clamp(${Math.round(mark.size * 0.62)}px, ${(mark.size / 10).toFixed(2)}vmin, ${Math.round(mark.size * 1.52)}px)`,
-            backgroundColor: baseColor(mark),
-            opacity: mark.opacity,
-            transform: baseTransform(mark),
-          }}
-        />
-      ))}
+      <div
+        ref={layerRef}
+        className="absolute inset-0 will-change-transform"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_54%_49%,rgba(255,255,255,0.018),transparent_42%)]" />
+        {marks.map((mark, index) => (
+          <div
+            key={mark.id}
+            ref={(piece) => {
+              pieceRefs.current[index] = piece;
+            }}
+            className={cn(
+              "triangle-halftone-piece",
+              mark.direction === "left" ? "clip-triangle-left" : "clip-triangle-right",
+              mark.mobileHidden && "hidden sm:block",
+            )}
+            style={{
+              left: `${mark.x}%`,
+              top: `${mark.y}%`,
+              width: `clamp(${Math.round(mark.size * 0.58)}px, ${(mark.size / 11).toFixed(2)}vmin, ${Math.round(mark.size * 1.34)}px)`,
+              backgroundColor: baseColor(mark),
+              opacity: mark.opacity,
+              transform: baseTransform(mark),
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

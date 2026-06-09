@@ -53,7 +53,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 
 const Experience: React.FC = () => {
   return (
-    <Section id="experience" className="bg-[#080808]">
+    <Section id="experience" className="bg-[#080808]/90">
       <SectionTitle subtitle="ENGINEERING_JOURNEY">Experience & Education</SectionTitle>
 
       <div className="max-w-4xl mx-auto">

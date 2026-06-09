@@ -26,7 +26,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#050505] relative overflow-x-hidden">
+    <div className="isolate flex flex-col min-h-screen bg-[#050505] relative overflow-x-hidden">
       <CustomCursor />
       <TriangleHalftoneBackground />
 

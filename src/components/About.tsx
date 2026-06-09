@@ -34,7 +34,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <Section id="about" className="bg-[#050505]">
+    <Section id="about" className="bg-[#050505]/88">
       <SectionTitle subtitle="SYSTEM_MANIFESTO">
         Software Developer
       </SectionTitle>

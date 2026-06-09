@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <Section id="contact" className="bg-[#050505]">
+    <Section id="contact" className="relative z-30 bg-[#050505]/95">
       <SectionTitle subtitle="COMMUNICATION_UPLINK">Contact Me</SectionTitle>
 
       <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                 { icon: <Mail />, label: "EMAIL", value: "faizalmalek03@icloud.com", href: "mailto:faizalmalek03@icloud.com" },
                 { icon: <Phone />, label: "PHONE", value: "076 020 5904", href: "tel:0760205904" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-6 p-6 rounded-xl bg-white/5 border border-white/10 group hover:border-emerald-500/50 transition-all duration-300">
+                <div key={i} className="flex items-center gap-6 p-6 rounded-xl bg-[#090909]/95 border border-white/10 shadow-[0_18px_50px_rgba(0,0,0,0.45)] group hover:border-emerald-500/50 transition-all duration-300">
                   <div className="h-12 w-12 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-500">
                     {React.cloneElement(item.icon as React.ReactElement, { className: "h-5 w-5" })}
                   </div>
@@ -85,7 +85,7 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            <div className="p-8 rounded-xl bg-emerald-500/5 border border-emerald-500/20 backdrop-blur-sm group hover:bg-emerald-500/10 transition-all duration-500">
+            <div className="p-8 rounded-xl bg-[#07110d]/95 border border-emerald-500/20 backdrop-blur-sm shadow-[0_18px_50px_rgba(0,0,0,0.45)] group hover:bg-emerald-500/10 transition-all duration-500">
               <h4 className="font-mono text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">SYSTEM_STATUS</h4>
               <p className="text-sm text-gray-500 leading-relaxed font-light">
                 Actively seeking opportunities in <span className="text-white">Full-Stack Engineering</span> and <span className="text-white">Web Development</span>. Available for remote, hybrid and on site roles.
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
         </FadeIn>
 
         <FadeIn direction="left">
-          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500 h-full">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 p-8 rounded-2xl bg-[#070707]/95 border border-white/10 backdrop-blur-xl shadow-2xl relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500 h-full">
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-1">
                 <label className="text-[10px] font-mono tracking-widest text-gray-500 ml-1 uppercase">Name</label>
@@ -106,7 +106,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="USER_NAME"
                   required
-                  className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
+                  className="w-full px-6 py-4 rounded-lg bg-black/70 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
                 />
               </div>
               <div className="space-y-1">
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   placeholder="USER_EMAIL"
                   required
-                  className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
+                  className="w-full px-6 py-4 rounded-lg bg-black/70 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
                 onChange={handleChange}
                 placeholder="MESSAGE_SUBJECT"
                 required
-                className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
+                className="w-full px-6 py-4 rounded-lg bg-black/70 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700"
               />
             </div>
 
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
                 placeholder="TYPE_YOUR_MESSAGE_HERE..."
                 required
                 rows={6}
-                className="w-full px-6 py-4 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700 resize-none"
+                className="w-full px-6 py-4 rounded-lg bg-black/70 border border-white/10 focus:outline-none focus:border-emerald-500/50 text-white font-mono text-sm transition-all placeholder:text-gray-700 resize-none"
               />
             </div>
 

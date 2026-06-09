@@ -59,7 +59,7 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <Section id="services" className="bg-[#080808]">
+    <Section id="services" className="bg-[#080808]/90">
       <SectionTitle subtitle="SERVICE_MODULES">What I Offer</SectionTitle>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

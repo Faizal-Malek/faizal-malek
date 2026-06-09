@@ -134,7 +134,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <Section id="projects" className="bg-[#050505]">
+    <Section id="projects" className="bg-[#050505]/88">
       <div className="">
         <SectionTitle subtitle="LATEST_DEPLOYMENTS">Featured Projects</SectionTitle>
         <div className="grid md:grid-cols-2 gap-8">

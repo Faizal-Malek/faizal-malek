@@ -5,6 +5,19 @@ import FadeIn from "./FadeIn";
 import { ArrowDownIcon, Sparkles, Code2, Rocket } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const TECH_STACK = [
+  "React",
+  "Node.js",
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "Java",
+  "C#",
+  "PHP",
+  "SQL",
+  "Docker",
+];
+
 const Hero: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -21,7 +34,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 overflow-hidden bg-[#050505]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-16 overflow-hidden bg-[#050505]/88">
       {/* Liquid glass background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
@@ -91,7 +104,7 @@ const Hero: React.FC = () => {
         {/* Tech stack floating icons - Glassmorphism */}
         <FadeIn delay={1000}>
           <div className="flex justify-center items-center gap-4 mt-16 flex-wrap">
-            {['React', 'Node.js', 'SQL', 'TypeScript', 'Docker', 'PHP'].map((tech, i) => (
+            {TECH_STACK.map((tech, i) => (
               <div
                 key={tech}
                 className="px-6 py-2 rounded-md bg-white/5 backdrop-blur-md border border-white/10 text-[10px] font-mono tracking-widest text-emerald-400/70 hover:text-emerald-400 hover:border-emerald-500/50 hover:scale-110 transition-all duration-300"
